@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -72,12 +74,17 @@ nav{
 }
 .nav-links a:hover:after{
     width: 100%;
+    
+}
+.nav-links a:hover{
+    color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 
 .slika{
     padding:10px 10px 165px 10px;
-    box-shadow: 0 0 20px 2px;
+    box-shadow: 0 0 20px 2px black;
     max-width: 100%;
     background-position: center;
     
@@ -140,13 +147,13 @@ h1{
 .pharagraphs{
     margin-top: 70px;
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .pharagraph1, .pharagraph2, .pharagraph3, .pharagraph4{
-    box-shadow: 0 0 20px 5px;
+    box-shadow: 0 0 20px 5px black;
     width: 320px;
-    margin: 20px 45px 20px 45px;
+    margin: 35px 35px 20px 35px;
     background-color: #24262b;
     height: 360px;
 }
@@ -187,7 +194,7 @@ h6{
     line-height: 40px;
     font-style: italic;
     text-align: center;
-    color:#24262b;
+    color:#b9b9b9;
 }
 
 .pharagraph5i, .pharagraph6i, .pharagraph7i, .pharagraph8i, .pharagraph9i{
@@ -314,7 +321,7 @@ ul{
     margin: 5px;
 }
 .adress{
-    margin-top: 120px;
+    margin-top: 140px;
 }
 
 .adress1{
@@ -342,29 +349,115 @@ ul{
     margin-right: 150px;
 }
 
-.istorijat{
-    text-align:justify;
-}
-.istorijatt{
-    margin: 50px 25% 0 25%;
-    padding: 20px;
-}
-details > summary{
-    list-style: none;
+.read-more-container{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    cursor: pointer;
-    margin: 70px 550px 0 550px;
-    font-size: 22px;
+    flex-direction: column;
     color: #ffffff;
 }
+.container1{
+    margin: 50px 25% 0 25%;
+    padding: 15px;
+    background-color: #24262b;
+    border-radius: 20px;
+    line-height: 20px;
+    box-shadow: 0 0 1px #24262b;
+}
+.container1 h3{
+    color:#ffffff;
+    line-height: 30px;
+    text-align: justify;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.read-more-btn{
+    color:#2c2f35;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+.read-more-text{
+    display: none;
+}
+.read-more-text--show{
+    display: inline;
+}
+
+summary{
+    cursor: pointer;
+    list-style: none;
+    color: #bbbbbb;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    margin: 70px 30% 30px 30%;
+    text-align: center;
+}
+summary:hover{
+    color:#ffffff;
+    transition: all 0.5s ease;
+}
+
 
 .content-details{
     margin-top: 50px;
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+}
+.container4{
+    margin: 50px 25% 0 25%;
+}
+.container4 h2{
+    margin-top: 30px;
+}
+.container4 h3{
+    margin-top: 20px;
+    text-align: justify;
+    letter-spacing: 0.7px;
+}
+.cards{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.card{
+    margin: 50px 50px 50px 50px;
+    background-color: #ffffff;
+    width:40%;
+    height: 100%;
+}
+.card img{
+    width:100%;
+    position: relative;
+}
+.card-info{
+    background-color: #ececec;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+ 
+}
+.h3-1{
+    margin:5% 2% 50px 2%;
+}
+.h3-2{
+    margin:5% 2% 75px 2%;
+}
+.h3-3{
+    margin:5% 2% 5% 2%;
+}
+.h3-4{
+    margin:5% 2% 5% 2%;
+}
+.card-info-1 i{
+    margin-right: 5px;
 }
 
 @media screen and (max-width:1920px){
@@ -373,19 +466,101 @@ details > summary{
         width:100%;
     }
 } 
+@media only screen and (max-width:1888px){
+    .h3-2{
+        margin: 5% 2% 100px 2%;
+    }
+}
 @media only screen and (max-width:1820px){
     .pharagraph5, .pharagraph6, .pharagraph7, .pharagraph8, .pharagraph9{
         height:350px;
     }
+}
+@media only screen and (max-width:1700px){
+    .h3-1{
+        margin:5% 2% 75px 2%;
+    }
+
 }
 
 @media screen and (max-width:1378px){
     .pharagraph8, .pharagraph6, .pharagraph9, .pharagraph7, .pharagraph5{
         height: 365px;
     }
-    .istorijatt{
+    .container1{
         margin: 50px 20% 0 20%;
         padding: 20px;
+    }
+}
+@media only screen and (max-width:1352px){
+    .h3-3{
+        margin:5% 2% 50px 2%;
+    }
+}
+
+@media only screen and (max-width:1323px){
+    .h3-4{
+        margin:5% 2% 66px 2%;
+    }
+}
+@media only screen and (max-width:1302px){
+    .h3-3{
+        margin:5% 2% 25px 2%;
+    }
+}
+@media only screen and (max-width:1237px){
+.h3-1{
+    margin: 5% 2% 50px 2%;
+}
+}
+@media only screen and (max-width:1189px){
+    .h3-2{
+        margin: 5% 2% 140px 2%;
+    }
+}
+@media only screen and (max-width:1122px){
+    .h3-3{
+        margin: 5% 2% 64px 2%;
+    }
+}
+@media only screen and (max-width:1036px){
+    .h3-4{
+        margin: 5% 2% 90px 2%;
+    }
+}
+@media only screen and (max-width:1008px){
+    .h3-4{
+        margin: 5% 2% 41px 2%;
+    }
+    .h3-3{
+        margin: 5% 2% 42px 2%;
+    }
+}
+
+
+
+
+@media only screen and (max-width:958px){
+    .h3-2{
+        margin: 5% 2% 168px 2%;
+    }
+
+}
+@media only screen and (max-width:900px){
+    .card{
+        width:80%;
+    }
+    .h3-1{
+        margin:5% 2% 56px 2%;
+    }
+    .h3-2{
+        margin: 5% 2% 105px 2%;
+    }
+    .h3-3{
+        margin: 5% 2% 56px 2%;
+    }
+    .h3-4{
+        margin: 5% 2% 56px 2%;
     }
 }
 
@@ -404,10 +579,13 @@ details > summary{
         width: 100%;
         height: 260px;
     }
-    .istorijatt{
+    .container1{
         margin: 50px 10% 0 10%;
         padding: 20px;
     } 
+    .container4{
+        margin: 50px 15% 0 15%;
+    }
 }
 @media screen and (max-width:1080px){
     .nav-links {
@@ -454,10 +632,25 @@ details > summary{
     .footer-col{
         width: 50%;
     }
+    details > summary{
+        margin: 70px 20% 0 20%;
+    
+    }
 }
 @media only screen and (max-width:730px){
     .button1, .button2{
         width:97%;
+    }
+}
+@media only screen and (max-width:700px){
+    .container1 h3{
+        text-align: left;
+        
+    }
+}
+@media only screen and (max-width:620px){
+    .container4{
+        margin: 50px 5% 0 5%;
     }
 }
 @media only screen and (max-width:501px){
@@ -477,9 +670,10 @@ details > summary{
     .middle1{
         width:80%;
     }
-    .istorijatt{
+    .container1{
         margin: 50px 2% 0 2%;
         padding: 20px;
+        letter-spacing: 0px;
     }
 }
 
@@ -498,13 +692,32 @@ details > summary{
         transform: translateX(0px);
     }
 }
+@media only screen and (max-width:480px){
+    .card{
+        width: 98%;
+    }
+}
 @media only screen and (max-width:396px){
     .right1{
         margin-left: 90%;
 }
+details > summary{
+    margin: 70px 2% 0 2%;
+
+}
 .pharagraph5, .pharagraph6, .pharagraph7, .pharagraph8, .pharagraph9{
     height:300px;
 }
+}
+@media only screen and (max-width:360px){
+    .card-info-1 i{
+        margin-right: 18px;
+    }
+}
+@media only screen and (max-width:322px){
+    .pharagraph1, .pharagraph2, .pharagraph3, .pharagraph4{
+        height: 380px;
+    }
 }
 @media only screen and (max-width:310px){
     .pharagraph8, .pharagraph6, .pharagraph9, .pharagraph7, .pharagraph5{
